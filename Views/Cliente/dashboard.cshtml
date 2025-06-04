@@ -1,0 +1,183 @@
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard da Empresa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Poppins', sans-serif;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: flex;
+      min-height: 100vh;
+      background: #f2f2f2;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 220px;
+      background: linear-gradient(135deg, #01004e, #0059ff);
+      color: white;
+      padding: 20px;
+      position: fixed;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+    }
+
+    .sidebar h2 {
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+
+    .sidebar a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      border-radius: 8px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* Main Content */
+    .main {
+      margin-left: 240px;
+      padding: 30px;
+      flex: 1;
+    }
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 40px;
+    }
+
+    .dashboard-header h1 {
+      font-size: 28px;
+    }
+
+    .card-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .card {
+      background: linear-gradient(135deg, #01004e, #0059ff);
+      color: white;
+      padding: 25px;
+      border-radius: 18px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .card h3 {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .card p {
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    /* Seção de cliente */
+    .client-section {
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      max-width: 940px;
+      margin-top: 30px;
+    }
+
+    .client-section h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    .client-info {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    .client-info p {
+      font-size: 16px;
+      line-height: 1.4;
+    }
+  </style>
+</head>
+<body>
+
+  <aside class="sidebar">
+    <h2>Admin</h2>
+    <a href="#">Solicitações de cancelamento</a>
+    <a href="#">Solicitações de cadastro</a>
+    <a href="#">Solicitações de alterações</a>
+    <a href="#">Clientes</a>
+    <a href="#">Relatórios</a>
+    <a href="#">Sair</a>
+  </aside>
+
+  <main class="main">
+    <div class="dashboard-header">
+      <h1>Dashboard</h1>
+      
+    </div>
+
+    <div class="card-container">
+      <div class="card">
+        <h3>Solicitações</h3>
+        <p>34</p>
+      </div>
+      <div class="card">
+        <h3>Planos Selecionados</h3>
+        <p>18</p>
+      </div>
+      <div class="card">
+        <h3>Novos Cadastros</h3>
+        <p>12</p>
+      </div>
+      <div class="card">
+        <h3>Cancelamentos</h3>
+        <p>4</p>
+      </div>
+    </div>
+<hr>
+<input type="text" placeholder="Buscar cliente..." style="padding: 10px; border-radius: 10px; border: 1px solid #ccc; margin-top: 30px; width: 800px;">
+<button style="padding: 10px; border-radius: 10px; border: 1px solid #0004ff; background-color:#0004ff; color:#ccc; margin: 30px; width: 100px;" >Buscar</button>
+    <div class="client-section">
+        
+      <h2>Consulta de Cliente</h2>
+      <div class="client-info">
+        <p><strong>ID:</strong> #00123</p>
+        <p><strong>CNPJ:</strong> 12.345.678/0001-99</p>
+        <p><strong>Razão Social:</strong> Empresa Exemplo LTDA</p>
+        <p><strong>Endereço:</strong> Rua das Flores, 123 - São Paulo, SP</p>
+        <p><strong>Plano:</strong> Premium</p>
+        <p><strong>Email de Contato:</strong> contato@empresa.com</p>
+      </div>
+    </div>
+
+  </main>
+
+</body>
+</html>

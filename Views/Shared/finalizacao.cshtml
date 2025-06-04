@@ -1,0 +1,23 @@
+@{
+    ViewData["Title"] = "Cadastro Finalizado";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css">
+    <title>@ViewData["Title"]</title>
+</head>
+<body>
+    <div class="container-caixa">
+        <div class="caixa">
+            <h1>CADASTRO FINALIZADO</h1>
+            <p>Já notificamos nosso setor comercial e logo mais, entraremos em contato para finalização da aderência do plano.</p>
+            <a asp-controller="Cliente" asp-action="Dados"><button>Ir para meus dados</button></a>
+        </div>
+    </div>
+</body>
+</html>

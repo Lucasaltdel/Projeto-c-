@@ -1,0 +1,110 @@
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Planos</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+
+    <section class="planos">
+        <h1>PLANOS</h1>
+        <div class="cards-container">
+            <div class="card">
+                <h2>COMUM</h2>
+                <p class="preco">$150</p>
+                <ul>
+                    <li>Modelos Pré-Definidos</li>
+                    <li>Up-Grade De Plano</li>
+                    <li>Suporte</li>
+                    <br>
+                </ul>
+                <a asp-controller="Cliente" asp-action="Finalizacao"><button>ESCOLHER</button></a>
+            </div>
+
+            <div class="card">
+                <h2>PREMIUM</h2>
+                <p class="preco">$500</p>
+                <ul>
+                    <li>Modelos Pré-Definidos</li>
+                    <li>Cancelamento Sem Taxa</li>
+                    <li>Up-Grade De Plano</li>
+                    <li>Suporte</li>
+                </ul>
+                <a asp-controller="Cliente" asp-action="Finalizacao"><button>ESCOLHER</button></a>
+            </div>
+
+            <div class="card">
+                <h2>PRO</h2>
+                <p class="preco">$1200</p>
+                <ul>
+                    <li>Modelos Pré-Definidos</li>
+                    <li>Alterações Personalizadas</li>
+                    <li>Cancelamento Sem Taxa</li>
+                    <li>Suporte</li>
+
+                </ul>
+               <a asp-controller="Cliente" asp-action="Finalizacao"><button>ESCOLHER</button></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparacao">
+        <h3>COMPARAÇÃO</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>COMUM</th>
+                    <th>PREMIUM</th>
+                    <th>PRO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Modelos Pré-Definidos</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Up-Grade De Plano</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Alterações Personalizadas</td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Cancelamento Sem Taxa</td>
+                    <td></td>
+                    <td>✔</td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Suporte</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                    <td>✔</td>
+                </tr>
+                <tr>
+                    <td>Alteração Sem Custo</td>
+                    <td></td>
+                    <td></td>
+                    <td>✔</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</body>
+</html>

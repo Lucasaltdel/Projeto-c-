@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="~/css/style.css" />
+    <script defer src="~/js/script.js"></script>
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <div class="form-container sign-up">
+            <form>
+                <h1>Pré Cadastro</h1>
+                <input type="text" placeholder="Razão Social">
+                <input type="number" placeholder="CNPJ">
+                <input type="password" placeholder="Nova Senha">
+                <input type="password" placeholder="Confirmar Senha">
+                <button id="continuarBtn">Continuar</button>
+            </form>
+        </div>
+        <div class="form-container sign-in">
+            <form>
+                <h1>LOGIN</h1>
+                <input type="email" placeholder="CNPJ">
+                <input type="password" placeholder="Senha">
+                <a href="#">Esqueceu sua senha?</a>
+                <button>Entrar</button>
+            </form>
+        </div>
+        <div class="toggle-container">
+            <div class="toggle">
+                <div class="toggle-panel toggle-left">
+                    <h1>Já possui conta?</h1>
+                    <p>Insira seus dados pessoais para usar todos os recursos do site</p>
+                    <button class="hidden" id="login">Entrar</button>
+                </div>
+                <div class="toggle-panel toggle-right">
+                    <h2>Vamos começar com</h2>
+                    <h3>o pré cadastro</h3>
+                    <a asp-controller="Cliente" asp-action="Cadastro"><button class="hidden" id="register">Continuar</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

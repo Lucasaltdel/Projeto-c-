@@ -1,0 +1,131 @@
+@{
+    ViewData["Title"] = "Login";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="~/css/style.css">
+    <script defer src="~/js/script.js"></script>
+    <title>Dados</title>
+</head>
+<body>
+
+    <div class="container-formulario">
+        <h2>INFORMAÇÕES CADASTRAIS</h2>
+        
+        <div class="form-endereco">
+            <label>ENDEREÇO COMERCIAL</label>
+            <div class="linha">
+              <input type="text" id="cep" placeholder="CEP" maxlength="9" onblur="pesquisacep(this.value)">
+              <input type="text" id="rua" placeholder="Rua">
+              <input type="text" id="numero" placeholder="Nº" class="input-pequeno">
+              <input type="text" id="complemento" placeholder="Complemento">
+            </div>
+            <div class="linha">
+              <input type="text" id="bairro" placeholder="Bairro">
+              <input type="text" id="cidade" placeholder="Cidade">
+              <input type="text" id="uf" placeholder="UF" class="input-pequeno">
+            </div>
+
+            <label>DADOS DA LOJA</label>
+            <div class="linha">
+              <input type="text" id="nome-fantasia" placeholder="NOME FANTASIA">
+              <select class="form-select">
+                  <option selected>Seguimento</option>
+                  <option value="1">MOVEIS</option>
+                  <option value="2">ELETRONICOS</option>
+                  <option value="3">SERVIÇOS</option>
+                  <option value="4">OUTRO...</option>
+              </select>
+            </div>
+
+            <label>DADOS DE ACESSO</label>
+            <div class="linha">
+              <input type="text" id="RAZÃO" placeholder="RAZÃO SOCIAL">
+              <input type="text" id="cnpj" placeholder="CNPJ">
+            </div>
+            <div class="linha">
+              <input type="email" placeholder="E-MAIL COMERCIAL">
+            </div>
+        </div>
+
+        <hr class="linha-separadora">
+        <h2>ALTERAR DADOS CADASTRAIS</h2>
+        
+        <div class="form-endereco">
+            <label>ENDEREÇO COMERCIAL</label>
+            <div class="linha">
+              <input type="text" id="cep" placeholder="CEP" maxlength="9" onblur="pesquisacep(this.value)">
+              <input type="text" id="rua" placeholder="Rua">
+              <input type="text" id="numero" placeholder="Nº" class="input-pequeno">
+              <input type="text" id="complemento" placeholder="Complemento">
+            </div>
+            <div class="linha">
+              <input type="text" id="bairro" placeholder="Bairro">
+              <input type="text" id="cidade" placeholder="Cidade">
+              <input type="text" id="uf" placeholder="UF" class="input-pequeno">
+            </div>
+
+            <label>DADOS DA LOJA</label>
+            <div class="linha">
+              <input type="text" id="nome-fantasia" placeholder="NOME FANTASIA">
+              <select class="form-select">
+                  <option selected>Seguimento</option>
+                  <option value="1">MOVEIS</option>
+                  <option value="2">ELETRONICOS</option>
+                  <option value="3">SERVIÇOS</option>
+                  <option value="4">OUTRO...</option>
+              </select>
+            </div>
+
+            <label>DADOS DE ACESSO</label>
+            <div class="linha">
+              <input type="text" id="RAZÃO" placeholder="RAZÃO SOCIAL">
+              <input type="text" id="cnpj" placeholder="CNPJ">
+            </div>
+            <div class="linha">
+              <input type="email" placeholder="E-MAIL COMERCIAL">
+            </div>
+
+            <label>PLANO:</label>
+            <div class="linha">
+              <select class="form-select" id="plano">
+                <option selected disabled>Selecione um plano</option>
+                <option value="basico" data-valor="29.90">Básico - R$29,90/mês</option>
+                <option value="intermediario" data-valor="59.90">Intermediário - R$59,90/mês</option>
+                <option value="avancado" data-valor="99.90">Avançado - R$99,90/mês</option>
+              </select>
+            </div>
+        </div>
+
+        <button class="cancelamento" id="alterar" onclick="mostrarPopup()">SOLICITAR ALTERAÇÃO</button>
+        <div class="popup-overlay" id="popup">
+            <div class="popup-box">
+              <h1>ALTERAÇÃO SOLICITADA</h1>
+              <p>Foi solicitada em nosso Sistema e logo mais os dados serão atualizados</p>
+              <button onclick="fecharPopup()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-formulario">
+        <h2>SOLICITAR CANCELAMENTO</h2>
+        <p class="cancelar">Ao solicitar o cancelamento, nossa equipe comercial entrará em contato para a finalização da conta e encerramento de contrato.</p>
+        <button class="cancelamento" onclick="mostrarPopupCancelar()" id="alterar">CANCELAR CONTA</button>
+        <div class="popup-overlay" id="popup-cancelar">
+            <div class="popup-box cancelar">
+              <p>CANCELAMENTO SOLICITADO</p>
+              <p>Foi solicitado em nosso Sistema e logo mais entraremos em contato</p>
+              <button onclick="fecharPopupCancelar()">Fechar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
